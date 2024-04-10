@@ -1,7 +1,7 @@
 import math as math
 
 # Abrindo arquivo para leitura e obtenção dos dados
-with open('./bisseccao/file2.txt', 'r') as file:
+with open('file.txt', 'r') as file:
     f=eval(file.readline())
     a=eval(file.readline())
     b=eval(file.readline())
