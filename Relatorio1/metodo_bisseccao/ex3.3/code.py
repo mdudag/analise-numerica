@@ -1,5 +1,5 @@
 # Discente: Maria Eduarda Guedes Alves
-# Metodo da Bisseccao
+# Metodo da Bisseccao - Exercicio 3.3
 
 import math as math
 
