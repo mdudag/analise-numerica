@@ -1,3 +1,6 @@
+# Maria Eduarda Guedes Alves
+# Metodo da Bisseccao - Exercicio 3.1
+
 import math as math
 
 # Abrindo arquivo para leitura e obtenção dos dados
