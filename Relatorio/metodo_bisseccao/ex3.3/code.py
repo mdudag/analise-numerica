@@ -5,12 +5,12 @@ with open('file.txt', 'r') as file:
     f0=eval(file.readline())
     a0=eval(file.readline())
     b0=eval(file.readline())
-    e0=eval(file.readline())     # bi - ai
+    e0=eval(file.readline())     
 
     f1=eval(file.readline())
     a1=eval(file.readline())
     b1=eval(file.readline())
-    e1=eval(file.readline())     # bi - ai
+    e1=eval(file.readline())    
     
 def bisseccao(f,a,b,e):
     # Verificacao de raiz em [a,b]
