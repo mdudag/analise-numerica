@@ -8,7 +8,7 @@ with open('file.txt', 'r') as file:
     f=eval(file.readline())
     a=eval(file.readline())
     b=eval(file.readline())
-    e=eval(file.readline())     # bi - ai
+    e=eval(file.readline())     
     
 def bisseccao(f,a,b,e):
     # Verificacao de raiz em [a,b]
