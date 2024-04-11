@@ -4,7 +4,7 @@
 import math as math
 
 # Abrindo arquivo para leitura e obtenção dos dados
-with open('./bisseccao/file3.txt', 'r') as file:
+with open('file.txt', 'r') as file:
     f=eval(file.readline())
     a=eval(file.readline())
     b=eval(file.readline())
@@ -41,5 +41,5 @@ def bisseccao(f,a,b,e):
 print('\n============ Buscando Raiz ==============')
 val = bisseccao(f,a,b,e) 
 
-print('\n============ Resultados ==============')
+print('\n============ Resultados Aproximados ==============\n')
 print(f'Inclinacao: {round(val,5)}\nf(x) = {round(f(val),5)}\n')
