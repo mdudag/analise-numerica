@@ -20,7 +20,8 @@ def bisseccao(f,a,b,e):
     x = (b+a)/2; f_x = f(x)
 
     # Imprimindo valores
-    print(f'\na: {a}\nb: {b}\nx: {x}\nf(x): {f_x}\ne: {e}')
+    print(f'\n\t  a |\t\tb |\t      x |\t\t f(x) |\t\t   e |\n')
+    print(f'{a:12f}  {b:12f}  {x:12f}  {f_x}  \t{e}')
 
     while abs(f_x) >= e:  
         # Mudando intervalo    
@@ -32,7 +33,8 @@ def bisseccao(f,a,b,e):
         x = (b+a)/2; f_x = f(x)
 
         # Imprimindo valores
-        print(f'\n\na: {a}\nb: {b}\nx: {x}\nf(x): {f_x}\ne: {e}')
+        print(f'{a:12f}  {b:12f}  {x:12f}  {f_x}  \t{e}')
+    print(f'\n\t  a |\t\tb |\t      x |\t\t f(x) |\t\t   e |')
 
     return x
 
