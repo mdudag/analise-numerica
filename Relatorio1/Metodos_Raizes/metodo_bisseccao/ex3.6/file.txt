@@ -1,0 +1,4 @@
+lambda x: math.sin(x) * math.cos(x) / (1 / 1.25 - math.cos(x) ** 2) - math.tan(math.radians(40))
+1
+1.2
+0.00000001
