@@ -1,4 +1,5 @@
 # Discente: Maria Eduarda Guedes Alves
+# Metodo de Jacobi - Exercicio 5.1
 
 # ==================== Guardando Entradas ====================
 
