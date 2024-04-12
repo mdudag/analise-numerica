@@ -69,7 +69,7 @@ if ok==True:    # Se o criterio foi atendido
               f'\nValor de convergencia: {xcomp}\n')
         c+=1
 
-        if xcomp <= e: break
+        if xcomp < e: break
 
 # ==================== Impressoes ==================== 
 
@@ -78,3 +78,7 @@ print(f'\nA:\n{A}\n'
       f'\nb:\n{b}\n'
       f'\ne: {e}\n'
       f'\nx de convergencia:\n{np.round(x1,4)}\n')
+
+print('\n==================== Aproximacao de A*x = b ====================\n')
+print(f'Valor de b:\n{b}'
+      f'\n\nValor de b resultante de A*x:\n{np.dot(A,x1)}\n')
