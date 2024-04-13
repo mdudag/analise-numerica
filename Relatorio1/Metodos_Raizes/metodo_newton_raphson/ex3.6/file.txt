@@ -1,0 +1,3 @@
+lambda x: math.sin(x) * math.cos(x) / (1 / 1.25 - math.cos(x) ** 2) - math.tan(0.69813170095714)
+1
+0.00000001
