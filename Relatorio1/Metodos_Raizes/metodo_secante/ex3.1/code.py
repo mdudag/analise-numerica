@@ -18,7 +18,7 @@ def secante(f, x0, x1, e):
     print(f'\n\t  x0 |\t\tx1 |\t      x2 |\t\t f(x2) |\t\t   e |\n')
     print(f'{x0:12f}  {x1:12f}  {x2:12f}  {f_x2}  \t{e}')
 
-    while f(x2) >= e: 
+    while abs(f_x2) >= e: 
         x0, x1 = x1, x2
         x2 = sec(x0, x1, f(x0), f(x1))
         f_x2 = f(x2)
@@ -32,4 +32,4 @@ print('\n============ Buscando Raiz ==============')
 val = secante(f, x0, x1, e) 
 
 print('\n============ Resultados ==============')
-print(f'Raiz da Equacao de Kepler: {val}\nf(x) = {f(val)}\n')
+print(f'Valor: {round(val,5)}\nf(x) = {round(f(val),5)}\n')
