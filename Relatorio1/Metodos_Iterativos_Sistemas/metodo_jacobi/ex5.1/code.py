@@ -25,14 +25,22 @@ b = np.array(vetor).reshape(n,1)
 
 # ==================== Condicao de Convergencia Diagonalmente Dominante ====================
 
+def sumLinhas(linha):
+    matriz_soma=0
+    for i in linha:
+        matriz_soma += i
+
+    return matriz_soma
+
 # Verificacao de colunas, depois linhas
 i=0; ok=True
 while i<2:
     j=0; ok=True
     while j<n and ok:
-        matriz_soma = np.sum(A, axis=i)
+        if i==0: matriz_soma = sumLinhas(A[:,j])    # Colunas
+        else:    matriz_soma = sumLinhas(A[i])      # Linhas
         
-        if A[j][j] <= matriz_soma[j]-A[j][j]:
+        if A[j][j] <= matriz_soma-A[j][j]:
             ok=False
         j+=1
     i+=1
