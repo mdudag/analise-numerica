@@ -1,5 +1,5 @@
 # Discente: Maria Eduarda Guedes Alves
-# Método da Posicao Falsa - Exercicio 3.1
+# Método da Posicao Falsa - Exercicio 3.3
 
 import math as math
 
