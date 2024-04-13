@@ -31,5 +31,5 @@
 
 ============ Resultados Aproximados ==============
 
-Inclinacao: 1.02376
+Valor: 1.02376
 f(x) = -0.0
