@@ -42,4 +42,4 @@ print('\n============ Buscando Raiz ==============')
 val = bisseccao(f,a,b,e) 
 
 print('\n============ Resultados Aproximados ==============\n')
-print(f'Inclinacao: {round(val,5)}\nf(x) = {round(f(val),5)}\n')
+print(f'Valor: {round(val,5)}\nf(x) = {round(f(val),5)}\n')
