@@ -32,13 +32,13 @@ def sumLinhas(linha):
 
     return matriz_soma
 
-# Verificacao de colunas, depois linhas
+# Verificacao de linhas, depois colunas
 i=0; ok=True
 while i<2:
     j=0; ok=True
     while j<n and ok:
-        if i==0: matriz_soma = sumLinhas(A[:,j])    # Colunas
-        else:    matriz_soma = sumLinhas(A[i])      # Linhas
+        if i==0: matriz_soma = sumLinhas(A[i])    # Linhas
+        else:    matriz_soma = sumLinhas(A[:,j])  # Colunas    
         
         if A[j][j] <= matriz_soma-A[j][j]:
             ok=False
@@ -50,34 +50,36 @@ while i<2:
 # ==================== Iteracoes de x ====================
 
 print('\n==================== Iteracoes ====================')
-if ok==True:    # Se o criterio foi atendido
-    x1=np.zeros((n,1))
-    print(f'\nx(0): \n{x1}')
+if ok==False:    # Se o criterio não foi atendido
+    print('\nCriterio nao atendido! \nNao há garantia de convergencia.')
 
-    c=1
-    while True:   # imitando estrutura "do while"
-        x0=np.array(x1)
+x1=np.zeros((n,1))
+print(f'\nx(0): \n{x1}')
 
-        i=0
-        while i<n:
-            xcomp=0
-            x1[i][0] = b[i][0]
+c=1
+while True:   # imitando estrutura "do while"
+    x0=np.array(x1)
 
-            j=0
-            while j<n:
-                if j!=i:
-                    x1[i][0] -= A[i][j]*x0[j][0]
-                j+=1
-            x1[i][0] /= A[i][i]
-            
-            i+=1
+    i=0
+    while i<n:
+        xcomp=0
+        x1[i][0] = b[i][0]
 
-        xcomp = np.max(np.abs(x1 - x0))/np.max(np.abs(x1))
-        print(f'\nx({c}): \n{x1}\n'
-              f'\nValor de convergencia: {xcomp}\n')
-        c+=1
+        j=0
+        while j<n:
+            if j!=i:
+                x1[i][0] -= A[i][j]*x0[j][0]
+            j+=1
+        x1[i][0] /= A[i][i]
+        
+        i+=1
 
-        if xcomp < e: break
+    xcomp = np.max(np.abs(x1 - x0))/np.max(np.abs(x1))
+    print(f'\nx({c}): \n{x1}\n'
+            f'\nValor de convergencia: {xcomp}\n')
+    c+=1
+
+    if xcomp < e: break
 
 # ==================== Impressoes ==================== 
 
