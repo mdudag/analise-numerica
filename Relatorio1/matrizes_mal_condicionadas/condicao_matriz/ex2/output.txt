@@ -1,0 +1,5 @@
+==================== Impressoes Finais ====================
+
+Resultado do calculo com matriz A:     10.5
+Resultado do calculo com inversa de A: 0.34423089
+Condicao da matriz: 3.614424345
