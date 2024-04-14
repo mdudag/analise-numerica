@@ -32,6 +32,14 @@ def sumLinhas(linha):
 
     return matriz_soma
 
+def max(x):
+    max=x[0]
+    for i in x[1:]:
+        if i>max:
+            max=i
+
+    return max
+
 # Verificacao de linhas, depois colunas
 i=0; ok=True
 while i<2:
@@ -74,7 +82,8 @@ while True:   # imitando estrutura "do while"
         
         i+=1
 
-    xcomp = np.max(np.abs(x1 - x0))/np.max(np.abs(x1))
+    xcomp = max(np.abs(x1 - x0))/max(np.abs(x1))
+    
     print(f'\nx({c}): \n{x1}\n'
             f'\nValor de convergencia: {xcomp}\n')
     c+=1
@@ -89,6 +98,6 @@ print(f'\nA:\n{A}\n'
       f'\ne: {e}\n'
       f'\nx de convergencia:\n{np.round(x1,4)}\n')
 
-print('\n==================== Aproximacao de A*x = b ====================\n')
+print('\n==================== Teste A*x = b ====================\n')
 print(f'Valor de b:\n{b}'
       f'\n\nValor de b resultante de A*x:\n{np.dot(A,x1)}\n')
