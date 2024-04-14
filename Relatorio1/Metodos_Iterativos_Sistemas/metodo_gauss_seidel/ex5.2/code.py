@@ -58,35 +58,37 @@ while i<2:
 # ==================== Iteracoes de x ====================
 
 print('\n==================== Iteracoes ====================')
-if ok==True:    # Se o criterio foi atendido
-    x1=np.zeros((n,1))
-    print(f'\nx(0): \n{x1}')
+if ok==False:    # Se o criterio não foi atendido
+    print('\nCriterio nao atendido! \nNao há garantia de convergencia.')
 
-    c=1
-    while True:   # imitando estrutura "do while"
-        x0=np.array(x1)
+x1=np.zeros((n,1))
+print(f'\nx(0): \n{x1}')
 
-        i=0
-        while i<n:
-            xcomp=0
-            x1[i][0] = b[i][0]
+c=1
+while True:   # imitando estrutura "do while"
+    x0=np.array(x1)
 
-            j=0
-            while j<n:
-                if j!=i:
-                    if j<i: x1[i][0] -= A[i][j]*x1[j][0]
-                    else:   x1[i][0] -= A[i][j]*x0[j][0]
-                j+=1
-            x1[i][0] /= A[i][i]
-            
-            i+=1
+    i=0
+    while i<n:
+        xcomp=0
+        x1[i][0] = b[i][0]
 
-        xcomp = max(np.abs(x1 - x0))/max(np.abs(x1))
-        print(f'\nx({c}): \n{x1}\n'
-              f'\nValor de convergencia: {xcomp}\n')
-        c+=1
+        j=0
+        while j<n:
+            if j!=i:
+                if j<i: x1[i][0] -= A[i][j]*x1[j][0]
+                else:   x1[i][0] -= A[i][j]*x0[j][0]
+            j+=1
+        x1[i][0] /= A[i][i]
+        
+        i+=1
 
-        if xcomp <= e: break
+    xcomp = max(np.abs(x1 - x0))/max(np.abs(x1))
+    print(f'\nx({c}): \n{x1}\n'
+            f'\nValor de convergencia: {xcomp}\n')
+    c+=1
+
+    if xcomp <= e: break
 
 # ==================== Impressoes ==================== 
 
