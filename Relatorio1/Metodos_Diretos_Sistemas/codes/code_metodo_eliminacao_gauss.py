@@ -1,5 +1,5 @@
-# Maria Eduarda Guedes Alves
-# Metodo da Eliminacao de Gauss - Exercicio 4.1
+# Discente:Maria Eduarda Guedes Alves
+# Metodo da Eliminacao de Gauss
 
 # ==================== Guardando Entradas ====================
 import numpy as np
