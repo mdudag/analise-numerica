@@ -33,7 +33,7 @@ print(f'A: \n{A}\n')
 
 print('\n==================== Modificando A ====================')
 
-# Modificacao de cima para embaixo
+# Modificacao de cima para baixo
 i=0
 while i<n-1:
     pivo=A[i][i]
